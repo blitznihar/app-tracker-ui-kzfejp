@@ -1,0 +1,44 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Policy Status</h1>
+  </div>
+</div>
+<div>
+
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step>
+    <ng-template matStepLabel matStepperIcon="done">Customer Form Filled</ng-template>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel matStepperIcon="done">Agent Reviewing Application</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>New Business Received Application</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>New Business Reviewing Application</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>NIGO</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Quality Reviewing Application</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Quality Review Completed</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Customer Signature Awaited</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Waiting on Payment</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Payment Received</ng-template>
+  </mat-step>
+   <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Policy Issued</ng-template>
+  </mat-step>
+</mat-vertical-stepper>
+</div>
